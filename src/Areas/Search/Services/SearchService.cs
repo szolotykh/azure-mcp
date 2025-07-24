@@ -124,7 +124,8 @@ public sealed class SearchService(ISubscriptionService subscriptionService, ICac
             var options = new SearchOptions
             {
                 IncludeTotalCount = true,
-                Size = 20
+                Size = 20,
+                QueryType = SearchQueryType.Full
             };
 
             var vectorFields = FindVectorFields(indexDefinition.Value);
